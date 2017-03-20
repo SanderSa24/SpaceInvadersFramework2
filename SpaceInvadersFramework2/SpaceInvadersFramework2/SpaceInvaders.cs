@@ -20,8 +20,10 @@ namespace SpaceInvadersFramework2
         }
         protected override void LoadContent()
         {
-            
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            screen = new Point(800, 600);
+            this.SetFullScreen(false);
+         
             GameStateManager.AddGameState("playingState", new PlayingState());
             GameStateManager.SwitchTo("playingState");
             
