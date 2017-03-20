@@ -18,7 +18,9 @@ namespace SpaceInvadersFramework2
         {
             Content.RootDirectory = "Content";
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
        
         protected override void LoadContent()
         {
