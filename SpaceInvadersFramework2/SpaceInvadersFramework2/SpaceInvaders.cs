@@ -25,8 +25,8 @@ namespace SpaceInvadersFramework2
             this.SetFullScreen(false);
          
             GameStateManager.AddGameState("playingState", new PlayingState());
-            GameStateManager.SwitchTo("playingState");
-            
+            gameStateManager.AddGameState("TitleScreenState", new TitleScreenState());
+            gameStateManager.SwitchTo("TitleScreenState");
         }
         
     }

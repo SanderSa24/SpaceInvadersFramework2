@@ -11,10 +11,12 @@ namespace SpaceInvadersFramework2
     {
         Player player;
         GameObjectList invaders, bullets;
+        Score score;
         public PlayingState() {
             player = new Player(this);
             invaders = new GameObjectList();
             bullets = new GameObjectList();
+            score = new Score();
             var xPos = SpaceInvaders.Screen.X / 2 - player.Width / 2;
             var yPos =  SpaceInvaders.Screen.Y - player.Width;
             player.Position = new Vector2(xPos, yPos);
@@ -31,7 +33,7 @@ namespace SpaceInvadersFramework2
             }
             Add(player);
             Add(invaders);
-           
+            Add(score);
         }
         public override void HandleInput(InputHelper inputHelper)
         {
@@ -56,7 +58,7 @@ namespace SpaceInvadersFramework2
                     {
                         i.Visible = false;
                         b.Visible = false;
-                      
+                        score.score += 10;
                     }
                 }
             }
