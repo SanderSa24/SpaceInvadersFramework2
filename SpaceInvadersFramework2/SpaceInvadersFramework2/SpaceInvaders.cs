@@ -18,16 +18,12 @@ namespace SpaceInvadersFramework2
         {
             Content.RootDirectory = "Content";
         }
-        /// <summary>
-        /// 
-        /// </summary>
-       
         protected override void LoadContent()
         {
             
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameStateManager.AddGameState("playingState", new PlayingState());
-
+            GameStateManager.SwitchTo("playingState");
             
         }
         
